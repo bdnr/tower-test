@@ -7,11 +7,11 @@
 
     - name: Get id
       shell: hostname
-      register: runhostname.stdout
+      register: runhost
 
     - name: Print hostname
       debug:
-        msg: "{{ runhostname }}"
+        msg: "{{ runhost.stdout }}"
       ignore_errors: yes
 
     - name: Print facts
