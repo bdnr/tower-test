@@ -7,13 +7,13 @@
 
     - name: Get id
       shell: hostname
-      register: runhostname
+      register: runhostname.stdout
 
     - name: Print hostname
       debug:
         msg: "{{ runhostname }}"
       ignore_errors: yes
 
-    - name: Print hostname from facts
+    - name: Print facts
       debug:
-        msg: "Facts hostname {{ ansible_hostname }}"
+        msg: "Facts: {{ ansible_hostname }} -  {{ ansible_default_ipv4.address }} - {{ ansible_fqdn }}"
