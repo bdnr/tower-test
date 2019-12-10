@@ -12,7 +12,6 @@
     - name: Print hostname
       debug:
         msg: "{{ runhost.stdout }}"
-      ignore_errors: yes
 
     - name: Print facts
       debug:
