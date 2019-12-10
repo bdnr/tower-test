@@ -1,5 +1,6 @@
----
-  - name: Test tower
-    tasks:
-      - name: Run id  
-        shell: id
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
