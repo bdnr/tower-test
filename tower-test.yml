@@ -1,0 +1,5 @@
+---
+  - name: Test tower
+    tasks:
+      - name: Run id  
+        shell: id
