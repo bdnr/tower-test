@@ -16,3 +16,5 @@
     - name: Print facts
       debug:
         msg: "Facts: {{ ansible_hostname }} -  {{ ansible_default_ipv4.address }} - {{ ansible_fqdn }}"
+
+    
