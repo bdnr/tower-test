@@ -1,6 +1,19 @@
-- name: Hello World Sample
+- name: Tower test sample
   hosts: all
   tasks:
-    - name: Hello Message
+    - name: Init Message
       debug:
-        msg: "Hello World!"
+        msg: "Tower test start!"
+
+    - name: Get id
+      shell: hostname
+      register: runid
+
+    - name: Print hostname
+      debug:
+        msg: "{{ hostname }}"
+      ignore_errors: yes
+
+    - name: Print hostname from facts
+      debug:
+        msg: "Facts hostname {{ ansible_hostname }}"
