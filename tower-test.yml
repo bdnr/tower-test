@@ -8,7 +8,7 @@
     - name: Get id
       shell: hostname
       register: runhost
-      changed_when: failed
+      changed_when: "runhost.rc > 0"
 
     - name: Print hostname
       debug:
